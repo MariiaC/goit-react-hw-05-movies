@@ -1,4 +1,4 @@
-import { useParams } from "react";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import Api from '../../services/Api';
 import Loader from '../Loader/Loaer';

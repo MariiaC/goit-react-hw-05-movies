@@ -1,5 +1,5 @@
 import {  useState, useEffect } from 'react';
-import { useParams } from "react";
+import { useParams } from "react-router-dom";
 import Api  from '../../services/Api';
 import Loader  from 'components/Loader/Loaer';
 

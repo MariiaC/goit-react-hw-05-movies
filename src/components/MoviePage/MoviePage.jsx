@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams } from "react";
+import { useSearchParams } from "react-router-dom";
 import Api from '../../services/Api';
 import Loader from '../Loader/Loaer';
 import EditorList from '../EditorList/EditorList';

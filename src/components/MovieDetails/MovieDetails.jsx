@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link, Outlet, useLocation } from "react";
+import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 import Api from '../../services/Api';
 import Loader from '../Loader/Loaer';
 import s from './MovieDetails.module.css';
