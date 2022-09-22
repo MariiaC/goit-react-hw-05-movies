@@ -32,7 +32,7 @@ const MovieDetails = () => {
     
     return (
         <div>
-            <Link to={location?.state?.from ?? '/movies'}>
+            <Link to={location?.state?.from ?? '/'}>
                 <button type='button'> Go back </button>
             </Link>
             {loading && <Loader />}
@@ -64,10 +64,10 @@ const MovieDetails = () => {
         <h3>Additional information</h3>
         <ul>
           <li>
-            <Link to="cast">Cast</Link>
+            <Link to="cast" state={location.state}>Cast</Link>
           </li>
           <li>
-            <Link to="reviews">Reviews</Link>
+            <Link to="reviews" state={location.state}>Reviews</Link>
           </li>
         </ul>
         <hr />

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import Api from '../../services/Api';
 import Loader from '../Loader/Loaer';
 import EditorList from '../EditorList/EditorList';
@@ -10,6 +10,7 @@ const MoviePage = () => {
     const [loading, setLoading] = useState(false);
     const [searchParams, setSearchParams] = useSearchParams({});
     const queryMovie = searchParams.get('query');
+    const location = useLocation();
 
 
     //при сабміті
@@ -45,7 +46,7 @@ const MoviePage = () => {
                 <button type="submit">Search</button>
             </form>
             {loading && <Loader />}
-            {searchFilms && <EditorList films={searchFilms} />}
+            {searchFilms && <EditorList films={searchFilms} state={ location} />}
         </main>
     );
 };
